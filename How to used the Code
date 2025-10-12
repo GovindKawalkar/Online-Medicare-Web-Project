@@ -1,0 +1,31 @@
+Open the Website:
+Launch any web browser such as Google Chrome, Firefox, or Edge.
+Type the website’s address (URL) or open the project file (if running locally using HTML).
+
+Home Page:
+The homepage displays a list of popular medicines, health products, and special offers.
+You can see sections like Home, Shop, Categories, About, and Contact on the navigation bar.
+
+Browse Medicines:
+Click on the Shop or Categories section.
+Browse through medicine categories such as Tablets, Syrups, Injections, Vitamins, and Personal Care.
+Each product shows its name, price, description, and availability.
+
+Search for Medicines:
+Use the Search Bar at the top of the page.
+Type the medicine name, and the system (using ⚙️ JavaScript) will display matching results instantly.
+
+View Product Details:
+Click on a medicine to view its detailed information including dosage, manufacturer, usage, and side effects.
+
+Add to Cart:
+When you find the medicine you want, click the “Add to Cart” button.
+The cart updates automatically using ⚙️ JavaScript.
+You can view the cart at any time to see selected items and total price.
+
+User Login / Signup:
+To place an order, you need to log in or create an account.
+Fill in your details such as name, email, and password in the Signup Form built using 🌐 HTML and 🎨 CSS.
+
+
+Admins also verify uploaded prescriptions and update delivery status.
