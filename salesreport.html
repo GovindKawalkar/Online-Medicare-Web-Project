@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Report</title>
+    <link rel="stylesheet" href="salesreport.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Pharma Care</h2>
+        <ul>
+            <li><a href="dashboard.html">🏠Dashboard</a></li>
+            <li><a href="doctororder.html">🩺Doctor Orders</a></li>
+            <li><a href="pos.html">💳PoS</a></li>
+            <li><a href="supplier.html">🚚Suppliers</a></li>
+            <li><a href="predictionsales.html">📊Prediction Report</a></li>
+            <li><a href="salesreport.html" class="active">📈Sales Report</a></li>
+            <li><a href="shopping.html">📦Shopping</a></li>
+            <li><a href="expired.html">⚠️Expired</a></li>
+            <li><a href="outofstock.html">❌Out of Stock</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <header>
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+            <button class="logout">Log out</button>
+        </header>
+        <div class="toggle-buttons">
+            <button id="salesChartBtn">Sales Chart</button>
+            <button id="salesReportBtn">Sales Report</button>
+        </div>
+        <div class="charts">
+            <div class="chart-container">
+                <h3>Sales Per Month</h3>
+                <canvas id="salesPerMonth"></canvas>
+            </div>
+            <div class="chart-container">
+                <h3>Sales Per Drug</h3>
+                <canvas id="salesPerDrug"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="salesreport.js"></script>
+</body>
+</html>

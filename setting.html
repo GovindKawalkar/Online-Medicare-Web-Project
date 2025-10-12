@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="setting.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Settings</h1>
+
+        <!-- Edit Profile Section -->
+        <div class="section">
+            <h2>Edit Profile</h2>
+            <div class="form-group">
+                <label for="profile-picture">Profile Picture</label>
+                <input type="file" id="profile-picture" name="profile-picture">
+            </div>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+            </div>
+            <button class="btn" onclick="saveProfileChanges()">Save Changes</button>
+        </div>
+
+        <!-- Add New Pharmacy User Section -->
+        <div class="section">
+            <h2>Add New Pharmacy User</h2>
+            <div class="form-group">
+                <label for="user-name">User Name</label>
+                <input type="text" id="user-name" name="user-name" placeholder="Enter user name">
+            </div>
+            <div class="form-group">
+                <label for="user-role">Role of the User</label>
+                <input type="text" id="user-role" name="user-role" placeholder="Enter role (e.g., Pharmacist, Assistant Pharmacist, Cashier)">
+            </div>
+            <div class="form-group">
+                <label for="user-contact">User Contact Number</label>
+                <input type="text" id="user-contact" name="user-contact" placeholder="Enter contact number">
+            </div>
+            <div class="form-group">
+                <label for="user-nic">User NIC</label>
+                <input type="text" id="user-nic" name="user-nic" placeholder="Enter NIC">
+            </div>
+            <div class="form-group">
+                <label for="user-email">User Email</label>
+                <input type="email" id="user-email" name="user-email" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="user-password">User Password</label>
+                <input type="password" id="user-password" name="user-password" placeholder="Enter password">
+            </div>
+            <button class="btn" onclick="addPharmacyUser()">Add User</button>
+        </div>
+
+        <!-- Add New Doctor Account Section -->
+        <div class="section">
+            <h2>Add New Doctor Account</h2>
+            <div class="form-group">
+                <label for="doctor-name">Doctor Name</label>
+                <input type="text" id="doctor-name" name="doctor-name" placeholder="Enter doctor name">
+            </div>
+            <div class="form-group">
+                <label for="doctor-contact">Doctor Contact Number</label>
+                <input type="text" id="doctor-contact" name="doctor-contact" placeholder="Enter contact number">
+            </div>
+            <div class="form-group">
+                <label for="doctor-slmc">Doctor SLMC Register Number</label>
+                <input type="text" id="doctor-slmc" name="doctor-slmc" placeholder="Enter SLMC register number">
+            </div>
+            <div class="form-group">
+                <label for="doctor-email">Doctor Email</label>
+                <input type="email" id="doctor-email" name="doctor-email" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="doctor-password">Doctor Password</label>
+                <input type="password" id="doctor-password" name="doctor-password" placeholder="Enter password">
+            </div>
+            <button class="btn" onclick="addDoctorAccount()">Add Doctor</button>
+        </div>
+    </div>
+
+    <script src="setting.js"></script>
+</body>
+</html>

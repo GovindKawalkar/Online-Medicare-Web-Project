@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplier List</title>
+    <link rel="stylesheet" href="supplier.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2 class="logo">Pharma<span>Care</span></h2>
+        <ul>
+            <li><a href="dashboard.html">🏠Dashboard</a></li>
+            <li><a href="doctororder.html">🩺Doctor Orders</a></li>
+            <li><a href="bill.html">💳Payment</a></li>
+            <li><a href="supplier.html" class="active">🚚Suppliers</a></li>
+            <li><a href="predictionsales.html">📊Prediction Report</a></li>
+            <li><a href="salesreport.html">📈Sales Report</a></li>
+            <li><a href="shopping.html">📦Shopping</a></li>
+            <li><a href="expired.html">⚠️Expired</a></li>
+            <li><a href="index.html">❌Logout</a></li>
+            
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+            <button class="tab-btn active" onclick="openTab('form')">Supplier Form</button>
+            <button class="tab-btn" onclick="openTab('list')">Supplier List</button>
+        </div>
+
+        <div id="list" class="tab-content active">
+            <div class="search-container">
+                <input type="text" id="searchBar" placeholder="Find suppliers by name">
+                <button id="searchBtn">Search</button>
+            </div>
+
+            <div class="supplier-list">
+                <h2>📦 Suppliers</h2>
+                <table>
+                    <tr>
+                        <th>SupplierID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Contact</th>
+                        <th>Drugs Available</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr>
+                        <td>18237823V</td>
+                        <td>Apple12</td>
+                        <td>sugad89123@gmail.com</td>
+                        <td>07161893612</td>
+                        <td>Dalcolx, Panadol, Citacins</td>
+                        <td>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>198273712V</td>
+                        <td>Huawei Company</td>
+                        <td>su@gmail.com</td>
+                        <td>071239121234</td>
+                        <td>Dalcolx, Panadol</td>
+                        <td>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>987234233V</td>
+                        <td>Huawei Company</td>
+                        <td>ken@gmail.com</td>
+                        <td>0773247673</td>
+                        <td>Dalcolx, Panadol</td>
+                        <td>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>198198917V</td>
+                        <td>Lalana Thanthiragama</td>
+                        <td>lalanachamika123@gmail.com</td>
+                        <td>0372266348</td>
+                        <td>Dalcolx, Panadol, Citrazin</td>
+                        <td>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="supplier.js"></script>
+</body>
+</html>

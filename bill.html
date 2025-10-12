@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill</title>
+    <link rel="stylesheet" href="bill.css">
+</head>
+<body>
+    <!-- Vertical Menu Bar on the Left -->
+    <div class="sidebar">
+        <h2 class="logo">Pharma<span>Care</span></h2>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="doctororder.html">Doctor Orders</a></li>
+            <li><a href="bill.html">Payment</a></li>
+            <li><a href="supplier.html">Suppliers</a></li>
+            <li><a href="report.html">Prediction Report</a></li>
+            <li><a href="salesreport.html">Sales Report</a></li>
+            <li><a href="shopping.html">Shopping</a></li>
+            <li><a href="expired.html">Expired</a></li>
+            <li><a href="dashboard.html">Back</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content on the Right -->
+    <div class="main-content">
+        <h1>🧾 Your Bill</h1>
+
+        <!-- Bill Table -->
+        <table id="billTable">
+            <tr>
+                <th>Name</th>
+                <th>ID</th>
+                <th>Quantity</th>
+                <th>Expire Date</th>
+                <th>Price</th>
+            </tr>
+        </table>
+
+        <!-- Tax Section -->
+        <div class="tax-section">
+            <label for="tax">Select Tax:</label>
+            <select id="tax" onchange="applyTax()">
+                <option value="0">0%</option>
+                <option value="10">10%</option>
+                <option value="25">25%</option>
+                <option value="32">32%</option>
+                <option value="50">50%</option>
+            </select>
+            <p>Subtotal: <span id="subtotal">$0</span></p>
+            <p>Tax: <span id="taxAmount">$0</span></p>
+            <p>Total: <span id="totalAmount">$0</span></p>
+        </div>
+
+        <!-- Payment Section -->
+        <div class="payment-section">
+            <h2>💳 Payment Options</h2>
+            <button onclick="showQRCode('BHIM Pay')">BHIM Pay</button>
+            <button onclick="showQRCode('GPay')">GPay</button>
+            <button onclick="processCreditCard()">Credit Card</button>
+            <div id="qrCodeSection" style="display: none;">
+                <p>Scan the QR Code:</p>
+                <img id="qrCodeImage" src="" alt="QR Code">
+            </div>
+        </div>
+
+        <!-- Print Bill Section -->
+        <div class="print-section">
+            <button onclick="printBill()">Print Bill</button>
+        </div>
+    </div>
+
+    <!-- Include the bill.js file -->
+    <script src="bill.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expired Drugs</title>
+    <link rel="stylesheet" href="expired.css">
+</head>
+<body>
+    <header>
+        <h1>PHARMA CARE</h1>
+    </header>
+
+    <div class="container">
+        <nav>
+            <button onclick="location.href='dashboard.html'">Dashboard</button>
+            <button onclick="location.href='expired.html'">Expired Drugs</button>
+            <button onclick="location.href='bill.html'">Payment</button>
+            <button onclick="location.href='doctororder.html'">Doctor Orders</button>
+            <button onclick="location.href='shopping.html'">Shopping</button>
+            <button onclick="location.href='salesreport.html'">Sales Report</button>
+            <button onclick="location.href='predictionsales.html'">Prediction Report</button>
+            <button onclick="location.href='supplier.html'">Suppliers</button>
+            <button onclick="location.href='index.html'">Log out</button>
+        </nav>
+
+        <main>
+            <section>
+                <button id="showExpired">Expired Drugs</button>
+                <button id="showAboutToExpire">About to Expire Drugs</button>
+            </section>
+
+            <section id="drugInfo">
+                <!-- Drug information will be displayed here -->
+            </section>
+        </main>
+    </div>
+
+    <script src="expired.js"></script>
+</body>
+</html>

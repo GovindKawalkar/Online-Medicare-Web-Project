@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Pharmacist</h1>
+    </header>
+
+    <div class="container">
+        <!-- Vertical Menu Bar on the Left -->
+        <nav>
+            <button onclick="location.href='dashboard.html'">Dashboard</button>
+            <button onclick="location.href='expired.html'">Expired Drugs</button>
+            <button onclick="location.href='about_to_expire.html'">About To Expire Drugs</button>
+            <button onclick="location.href='doctor_orders.html'">Doctor Orders</button>
+            <button onclick="location.href='inventory.html'">Inventory</button>
+            <button onclick="location.href='sales_report.html'">Sales Report</button>
+            <button onclick="location.href='prediction_report.html'">Prediction Report</button>
+            <button onclick="location.href='suppliers.html'">Suppliers</button>
+            <button onclick="location.href='index.html'">Log out</button>
+        </nav>
+
+        <!-- Main Content on the Right -->
+        <main>
+            <!-- Bill Section -->
+            <section>
+                <h2>Bill</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>NAME</th>
+                            <th>ID</th>
+                            <th>QUANTITY</th>
+                            <th>EXPIRE DATE</th>
+                            <th>PRICE</th>
+                            <th>ACTIONS</th>
+                        </tr>
+                    </thead>
+                    <tbody id="billTableBody">
+                        <!-- Rows will be added dynamically -->
+                    </tbody>
+                </table>
+                <button onclick="addRow()">Add Item</button>
+            </section>
+
+            <!-- Check Out Section -->
+            <section>
+                <h2>Check Out</h2>
+                <div>
+                    <p><strong>Total:</strong> <span id="total">0</span></p>
+                    <p>
+                        <strong>Tax:</strong>
+                        <select id="tax" onchange="applyTax()">
+                            <option value="0">0%</option>
+                            <option value="10">10%</option>
+                            <option value="25">25%</option>
+                            <option value="32">32%</option>
+                            <option value="50">50%</option>
+                        </select>
+                    </p>
+                    <p><strong>Paid Amount:</strong> <span id="paidAmount">0</span></p>
+                    <p><strong>Balance:</strong> <span id="balance">0</span></p>
+                    <button onclick="printBill()">Print Bill</button>
+                </div>
+            </section>
+
+            <!-- Payment Section -->
+            <section>
+                <h2>Payment</h2>
+                <div id="paymentOptions">
+                    <button onclick="showQRCode('BHIM Pay')">BHIM Pay</button>
+                    <button onclick="showQRCode('GPay')">GPay</button>
+                    <button onclick="showQRCode('Credit Card')">Credit Card</button>
+                </div>
+                <div id="qrCodeSection" style="display: none;">
+                    <p>Scan the QR Code:</p>
+                    <img id="qrCodeImage" src="" alt="QR Code">
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

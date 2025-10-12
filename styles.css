@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #6bb4f8, #0d1b2a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    text-align: center;
+}
+.login-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+.avatar {
+    width: 80px;
+    height: 80px;
+    background: gray;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+}
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.error {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+.remember-me {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 13px;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #0abde3;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+button:hover {
+    background: #079992;
+}
+.links a {
+    display: inline-block;
+    margin: 5px;
+    text-decoration: none;
+    color: #0abde3;
+    font-size: 14px;
+}
+footer h3 {
+    color: white;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.pharma {
+    color: #007bff;
+}
+.care {
+    color: #0abde3;
+}

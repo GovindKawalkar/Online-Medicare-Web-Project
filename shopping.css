@@ -1,0 +1,193 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    margin: 0;
+    background: #f4f7fc;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: linear-gradient(45deg, #6a11cb, #6a11cb);
+    color: white;
+    padding: 25px;
+    height: 110vh;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #ffde59;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 1px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background: rgba(170, 170, 247, 0.82);
+    transform: translateX(10px);
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Search Bar */
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#searchBar {
+    width: 80%;
+    padding: 10px;
+    border: 2px solid #0083b0;
+    border-radius: 8px;
+}
+
+#searchBtn {
+    padding: 10px 20px;
+    background: #ffde59;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Product Section */
+.products-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow-x: auto;
+}
+
+.products {
+    display: flex;
+    gap: 15px;
+}
+
+.product-card {
+    border: none;
+    padding: 15px;
+    text-align: center;
+    min-width: 180px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.product-name {
+    font-weight: bold;
+    color: #0083b0;
+}
+
+.product-price {
+    font-size: 14px;
+    color: #ff5733;
+}
+
+.addToBill {
+    background: #0083b0;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.addToBill:hover {
+    background: #00b4db;
+}
+
+/* Scroll Buttons */
+.scroll-btn {
+    position: absolute;
+    background: #ffde59;
+    color: black;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.scroll-btn:hover {
+    background: #fca311;
+}
+
+.left-btn {
+    left: 0;
+}
+
+.right-btn {
+    right: 0;
+}
+
+/* Bill & Checkout */
+.bill-section, .checkout-section {
+    margin-top: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bill-section h2 {
+    color: #ff5733;
+}
+
+.checkout-section h3 {
+    color: #0083b0;
+}
+
+#checkoutBtn {
+    background: #ff5733;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#checkoutBtn:hover {
+    background: #c70039;
+}

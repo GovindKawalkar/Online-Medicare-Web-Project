@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard for Medicine Sales and Target Performance</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Left Side Menu Bar -->
+    <div class="menu-bar">
+        <div class="logo">PHARMA CARE</div>
+        <ul>
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            <li><a href="shopping.html">Medicine Products</a></li>
+            <li><a href="doctororder.html">Doctors</a></li>
+            <li><a href="supplier.html">Suppliers</a></li>
+            <li><a href="salesreport.html">Reports</a></li>
+            <li><a href="predictionsales.html">Prediction Sales</a></li>
+            <li><a href="expired.html">Expired Product</a></li>
+            <li><a href="setting.html">Settings</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="search-bar">
+            <input type="text" placeholder="Search...                       🔍">
+        </div>
+        <div class="profile-section">
+            <button class="message-button" onclick="showMessage('No Message')">Message</button>
+            <img src="prof.jpg" alt="Profile Photo" class="profile-photo">
+            <span class="profile-name">Admin</span>
+        </div>
+    </div>
+
+    <!-- Dashboard Content -->
+    <div class="dashboard">
+        <!-- Dashboard Title -->
+        <h1 class="dashboard-title">Dashboard for Medicine Sales and Target Performance</h1>
+
+        <!-- Charts Section -->
+        <div class="charts">
+            <div class="chart-container">
+                <canvas id="salesChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="revenueChart"></canvas>
+            </div>
+        </div>
+
+        <!-- News Section -->
+        <div class="news-section">
+            <h2>News of Medicine Stock Market</h2>
+            <div class="news-content">
+                <p><strong>Breaking News:</strong> Pharma stocks surge as new drug approvals hit record highs.</p>
+                <p><strong>Market Update:</strong> Global medicine market expected to grow by 8% this year.</p>
+                <p><strong>Company Spotlight:</strong> MediLife announces breakthrough in cancer treatment.</p>
+            </div>
+        </div>
+
+        <!-- Delivery Targets Section -->
+        <div class="delivery-targets">
+            <h2>Today's Delivery Targets</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Company</th>
+                        <th>Payment</th>
+                        <th>Delivery Boy</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MediLife</td>
+                        <td>Paid</td>
+                        <td>Rajesh</td>
+                    </tr>
+                    <tr>
+                        <td>PharmaPlus</td>
+                        <td>Pending</td>
+                        <td>Kumar</td>
+                    </tr>
+                    <tr>
+                        <td>HealthCare</td>
+                        <td>Paid</td>
+                        <td>Anil</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
