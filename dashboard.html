@@ -1,5 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
+    /* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Left Side Menu Bar */
+.menu-bar {
+    width: 250px;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu-bar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #fff;
+}
+
+.menu-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-bar ul li {
+    margin: 15px 0;
+}
+
+.menu-bar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.menu-bar ul li a:hover {
+    background-color: #f1f4f7;
+    transform: translateX(10px);
+}
+
+.menu-bar ul li a.active {
+    background-color: #007bff;
+    font-weight: bold;
+}
+
+/* Top Bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #ffffff, #f4f4f9);
+    padding: 10px 20px;
+    margin-left: 250px; /* Adjust for the menu bar width */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input {
+    width: 300;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.search-bar input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+}
+
+.profile-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+    border: 2px solid #007bff;
+    transition: transform 0.3s;
+}
+
+.profile-photo:hover {
+    transform: scale(1.1);
+}
+
+.profile-name {
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.message-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.message-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Dashboard Content */
+.dashboard {
+    margin-left: 270px; /* Adjust for the menu bar width */
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.dashboard-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.charts {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 48%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.chart-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.news-section {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.news-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.news-section h2 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.news-content p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.delivery-targets {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.delivery-targets:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.delivery-targets h2 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.delivery-targets table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.delivery-targets th, .delivery-targets td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.delivery-targets th {
+    background-color: #f4f4f9;
+    color: #2c3e50;
+}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -95,4 +313,5 @@
 
     <script src="dashboard.js"></script>
 </body>
+
 </html>
