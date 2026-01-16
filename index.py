@@ -61,6 +61,11 @@ if st.button("Login", use_container_width=True):
 
 st.write("dashboard.html")
 
+def load_dashboard():
+    with open("dashboard.html", "r", encoding="utf-8") as f:
+        dashboard_html = f.read()
+    html(dashboard_html, height=1200, scrolling=True)
+
 col1, col2, col3 = st.columns(3)
 
 with col1:
@@ -78,4 +83,5 @@ st.markdown("""
     <span class='pharma'>pharma</span><span class='care'>care</span>
 </div>
 """, unsafe_allow_html=True)
+
 
