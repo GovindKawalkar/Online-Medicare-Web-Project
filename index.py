@@ -59,7 +59,7 @@ if st.button("Login", use_container_width=True):
         st.session_state.user_email = email
         # st.switch_page("dashboard.py")  # use when dashboard exists
 
-st.write("---")
+st.write("dashboard.html")
 
 col1, col2, col3 = st.columns(3)
 
@@ -78,3 +78,4 @@ st.markdown("""
     <span class='pharma'>pharma</span><span class='care'>care</span>
 </div>
 """, unsafe_allow_html=True)
+
