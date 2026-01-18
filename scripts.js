@@ -1,21 +1,15 @@
-function validateLogin() {
-    let email = document.getElementById('email').value;
-    let password = document.getElementById('password').value;
-    let emailError = document.getElementById('emailError');
-    
-    if (!email.includes('@')) {
-        emailError.style.display = 'block';
-        return;
-    } else {
-        emailError.style.display = 'none';
-    }
-    if (email && password) {
-        window.location.href = 'dashboard.html';
-    } else {
-        alert('Please enter valid credentials');
-    }
-}
+document.getElementById("loginForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // stop page reload
 
-document.getElementById('signupButton').addEventListener('click', function() {
-    window.location.href = 'signup.html';
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+    let message = document.getElementById("message");
+
+    // demo credentials (you can change)
+    if (username === "admin" && password === "admin123") {
+        window.location.href = "dashboard.html";
+    } else {
+        message.style.color = "red";
+        message.innerText = "Invalid username or password";
+    }
 });
